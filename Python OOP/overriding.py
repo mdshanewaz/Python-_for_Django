@@ -11,7 +11,8 @@ obj.hello()
 
 class B(A):
     def __init__(self):
-        pass
+        print(self)
+        print("Hello from class B for {}".format(self))
 
     def hello(self):
         print("Hello its overrided!")

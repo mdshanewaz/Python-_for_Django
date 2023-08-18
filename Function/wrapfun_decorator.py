@@ -18,7 +18,9 @@ def myWrapper(fun):
     return test
 
 def great():
-    print("Hello World!")
+    print("Hello, World2!")
+
+great()
 
 def hello():
     print("Hello BD!")
@@ -28,3 +30,13 @@ great()
 
 hello = myWrapper(hello)
 hello()
+
+@myWrapper
+def hello2(): # eqivalent; hello2 = myWrapper(hello2)
+    print("Hello BD2")
+hello2()
+
+
+hello()
+
+hello2()

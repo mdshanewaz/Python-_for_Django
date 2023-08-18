@@ -5,23 +5,18 @@ class A:
     def hello(self):
         print("Hello form A")
 
-class B:
-    def __init__(self, job):
+class B(A):
+    def __init__(self, nam, job):
+        super().__init__(nam)
         self.possition = job
 
     def hello(self):
         print("Hello form B")
 
-class C(A, B):
+class C(B):
     pass
 
-class D(B, A):
-    pass
-
-obj1 = C("Shawon")
-obj1.hello()
-print(dir(obj1))
-
-obj2 = D("Shawon")
-obj2.hello()
-print(dir(obj2))
+obj = C("Shawon", "Newaz")
+obj.hello()
+print(dir(obj))
+print(C.__mro__)

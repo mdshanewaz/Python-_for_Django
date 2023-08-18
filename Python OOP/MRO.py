@@ -13,15 +13,13 @@ class B:
         print("Hello form B")
 
 class C(A, B):
-    pass
+    def __init__(self):
+        pass
 
-class D(B, A):
-    pass
+    def hello(self):
+        print("Hello form C")
 
-obj1 = C("Shawon")
+obj1 = C()
 obj1.hello()
-print(dir(obj1))
-
-obj2 = D("Shawon")
-obj2.hello()
-print(dir(obj2))
+#print(dir(obj1))
+print(C.__mro__)

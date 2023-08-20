@@ -1,4 +1,4 @@
-#range
+#range of python
 a = range(10)
 print(a)
 
